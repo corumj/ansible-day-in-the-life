@@ -1,6 +1,6 @@
 ---
 - name: Set a Cyrpto Policy using RHEL System Role
-  hosts: tag_demo 
+  hosts: all 
   become: yes 
   vars:
     crypto_policies_policy: "DEFAULT:NO-SHA1"
