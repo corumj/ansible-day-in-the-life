@@ -1,0 +1,15 @@
+---
+- name: Set a Cyrpto Policy using RHEL System Role
+  hosts: tag_demo 
+  become: yes 
+  vars:
+    crypto_policies_policy: "DEFAULT:NO-SHA1"
+    crypto_policies_reload: false
+
+  tasks:
+    - name: Crypto RHEL System Role 
+      include_role: 
+        name: redhat.rhel_system_roles.crypto_policies
+
+    # - name: Set NTP 
+    # - name: Set Hostname 
